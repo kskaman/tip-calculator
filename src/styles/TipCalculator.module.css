@@ -1,0 +1,24 @@
+.mainDiv {
+  width: 63.89%;
+  max-width: 920px;
+  height: 481px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.125em;
+  padding: 2.125em;
+}
+
+.userDataDiv {
+  display: flex;
+  padding: 0.5em;
+  flex-direction: column;
+}
+
+.resultDiv {
+  background-color: #00474b;
+  border: none;
+  border-radius: 15px;
+}
