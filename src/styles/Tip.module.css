@@ -1,0 +1,31 @@
+.tipDiv {
+  background-color: #00474b;
+  color: #ffffff;
+  width: 118px;
+  height: 48px;
+  border: none;
+  font-size: 24px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.customTip {
+  background-color: #f3f9fa;
+  color: #547878;
+}
+
+.tipDiv:active {
+  background-color: #9fe8df;
+  color: #00474b;
+}
+
+@media (max-width: 980px) {
+  .tipDiv {
+    width: 100%;
+    min-width: 146.63px;
+  }
+}

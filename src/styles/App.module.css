@@ -4,7 +4,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 7em;
+  gap: 5.5em;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 980px) {
+  .container {
+    padding: 5em 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 50px 0;
+    gap: 40.86px;
+  }
 }

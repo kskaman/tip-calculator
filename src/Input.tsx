@@ -1,4 +1,4 @@
-import inputStyles from "./styles/InputStyles.module.css";
+import inputStyles from "./styles/Input.module.css";
 
 interface Props {
   tag: string;
@@ -6,6 +6,28 @@ interface Props {
   mode: "numeric" | "decimal";
 }
 const Input = ({ tag, icon, mode }: Props) => {
+  // const [value, setValue] = useState("");
+
+  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const inputValue = event.target.value;
+
+  //   // Allow only positive integers
+  //   if (/^[0-9]*$/.test(inputValue)) {
+  //     setValue(inputValue); // Update state only for valid input
+  //   }
+  // };
+
+  // const [value, setValue] = useState("");
+
+  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const inputValue = event.target.value;
+
+  //   // Allow only numbers and decimals
+  //   if (/^\d*\.?\d*$/.test(inputValue)) {
+  //     setValue(inputValue); // Update state only for valid input
+  //   }
+  // };
+
   return (
     <div className={inputStyles.inputDiv}>
       <label className={inputStyles.inputLabel}>{tag}</label>
