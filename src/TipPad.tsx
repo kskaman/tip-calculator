@@ -44,6 +44,11 @@ const TipPad = ({ tipValue, onTipChange, tipType, setTipType }: Props) => {
   };
 
   const handleCustomSubmit = (value: string) => {
+    const numericValue = parseFloat(value);
+    if (isNaN(numericValue) || numericValue < 0) {
+      return;
+    }
+
     setCustomTip(value);
     if (
       typeof customTip === "string" ||

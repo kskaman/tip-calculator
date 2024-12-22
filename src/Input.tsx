@@ -1,5 +1,7 @@
 import inputStyles from "./styles/Input.module.css";
 
+import { useValidation } from "./utils/useValidation";
+
 interface Props {
   tag: string;
   icon: string;
@@ -17,6 +19,8 @@ const Input = ({
   setValue,
   warning = false,
 }: Props) => {
+  const { validateNumericInput, validateDecimalInput } = useValidation();
+
   // Handler for keydown events to prevent invalid key presses
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     const { key } = event;
@@ -29,9 +33,7 @@ const Input = ({
       key === "Escape" ||
       key === "Enter" ||
       key === "ArrowLeft" ||
-      key === "ArrowRight" ||
-      key === "Home" ||
-      key === "End"
+      key === "ArrowRight"
     ) {
       return;
     }
@@ -61,16 +63,10 @@ const Input = ({
   // Handler for change events to manage input value
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = event.target.value;
-    if (mode === "numeric") {
-      // Allow only positive integers
-      if (/^[0-9]*$/.test(inputValue)) {
-        setValue(inputValue);
-      }
-    } else if (mode === "decimal") {
-      // Allow numbers with up to two decimal places
-      if (/^\d*\.?\d{0,2}$/.test(inputValue)) {
-        setValue(inputValue);
-      }
+    if (mode === "numeric" && validateNumericInput(inputValue)) {
+      setValue(inputValue);
+    } else if (mode === "decimal" && validateDecimalInput(inputValue)) {
+      setValue(inputValue);
     }
   };
 

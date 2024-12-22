@@ -13,6 +13,7 @@ const Tip = ({ val, selected, onSelect }: Props) => {
         val === "Custom" ? tipStyles.customTip : ""
       } ${selected === true ? tipStyles.selected : ""}`}
       onClick={() => onSelect(val)}
+      aria-label={`Select tip : ${val}`}
     >
       {val}
     </button>
