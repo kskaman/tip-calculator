@@ -16,6 +16,11 @@
   gap: 14px;
 }
 
+.inputDiv,
+.inputWrapper {
+  height: fit-content;
+}
+
 @media (max-width: 480px) {
   .tipsContainer {
     grid-template-columns: 1fr 1fr;

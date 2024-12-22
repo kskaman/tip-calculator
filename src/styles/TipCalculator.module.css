@@ -31,7 +31,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
+  padding: 30px;
 }
 
 .resetButton {
@@ -48,6 +48,11 @@
 
 .resetButton:active {
   background-color: #9fe8df;
+  color: #00474b;
+}
+
+.resetButton.highlightReset {
+  background-color: #26c2ae;
   color: #00474b;
 }
 
